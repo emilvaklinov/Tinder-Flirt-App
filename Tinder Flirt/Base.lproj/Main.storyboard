@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uFw-tm-46i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lP1-bl-Ckf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -101,6 +101,115 @@
             </objects>
             <point key="canvasLocation" x="-580" y="106.59670164917542"/>
         </scene>
+        <!--Update View Controller-->
+        <scene sceneID="S1i-Xi-FbG">
+            <objects>
+                <viewController id="lP1-bl-Ckf" customClass="UpdateViewController" customModule="Tinder_Flirt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rU6-Fw-BqF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="40D-ii-VRf">
+                                <rect key="frame" x="50" y="20" width="275" height="275"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="40D-ii-VRf" secondAttribute="height" multiplier="1:1" id="D7w-9k-fZo"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8e-Or-JJN">
+                                <rect key="frame" x="115.5" y="318" width="144" height="30"/>
+                                <state key="normal" title="Update Profile Image"/>
+                                <connections>
+                                    <action selector="updateImageTapped:" destination="lP1-bl-Ckf" eventType="touchUpInside" id="EWv-Wp-vaR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fr-IN-v5V">
+                                <rect key="frame" x="162" y="356" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jcf-CS-9hS">
+                                <rect key="frame" x="163" y="385" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEX-20-zSj">
+                                <rect key="frame" x="122" y="390" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJO-Id-bzA">
+                                <rect key="frame" x="220" y="390" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am interested in:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPu-H4-wq8">
+                                <rect key="frame" x="119.5" y="424" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OTf-nv-vs9">
+                                <rect key="frame" x="163" y="453" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Men" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYd-Ji-YwT">
+                                <rect key="frame" x="125.5" y="458" width="33.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Women" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pu-ck-mfn">
+                                <rect key="frame" x="220" y="458" width="58.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ora-ZX-RJz">
+                                <rect key="frame" x="162" y="492" width="51" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateTapped:" destination="lP1-bl-Ckf" eventType="touchUpInside" id="A8o-Mm-FsK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jcf-CS-9hS" firstAttribute="top" secondItem="0fr-IN-v5V" secondAttribute="bottom" constant="8" id="23X-ep-yfU"/>
+                            <constraint firstItem="GZU-lI-A8H" firstAttribute="trailing" secondItem="40D-ii-VRf" secondAttribute="trailing" constant="50" id="38r-Q4-wWw"/>
+                            <constraint firstItem="BEX-20-zSj" firstAttribute="centerY" secondItem="jcf-CS-9hS" secondAttribute="centerY" id="3QO-N7-LRp"/>
+                            <constraint firstItem="OTf-nv-vs9" firstAttribute="leading" secondItem="rYd-Ji-YwT" secondAttribute="trailing" constant="4" id="AXt-0L-qW5"/>
+                            <constraint firstItem="O8e-Or-JJN" firstAttribute="centerX" secondItem="rU6-Fw-BqF" secondAttribute="centerX" id="GUK-bE-gYp"/>
+                            <constraint firstItem="40D-ii-VRf" firstAttribute="top" secondItem="GZU-lI-A8H" secondAttribute="top" constant="20" id="GuQ-JF-DUe"/>
+                            <constraint firstItem="rYd-Ji-YwT" firstAttribute="centerY" secondItem="OTf-nv-vs9" secondAttribute="centerY" id="IGE-J3-UbD"/>
+                            <constraint firstItem="DJO-Id-bzA" firstAttribute="centerY" secondItem="jcf-CS-9hS" secondAttribute="centerY" id="KHK-ix-yxF"/>
+                            <constraint firstItem="O8e-Or-JJN" firstAttribute="top" secondItem="40D-ii-VRf" secondAttribute="bottom" constant="23" id="LnY-Bp-R8g"/>
+                            <constraint firstItem="jcf-CS-9hS" firstAttribute="leading" secondItem="BEX-20-zSj" secondAttribute="trailing" constant="8" id="PZG-8a-cxn"/>
+                            <constraint firstItem="OTf-nv-vs9" firstAttribute="top" secondItem="UPu-H4-wq8" secondAttribute="bottom" constant="8" id="XtX-9Z-Kna"/>
+                            <constraint firstItem="0fr-IN-v5V" firstAttribute="centerX" secondItem="rU6-Fw-BqF" secondAttribute="centerX" id="ZWJ-bN-LaQ"/>
+                            <constraint firstItem="Ora-ZX-RJz" firstAttribute="centerX" secondItem="rU6-Fw-BqF" secondAttribute="centerX" id="Zgc-6x-o1f"/>
+                            <constraint firstItem="40D-ii-VRf" firstAttribute="leading" secondItem="GZU-lI-A8H" secondAttribute="leading" constant="50" id="afl-PA-D1N"/>
+                            <constraint firstItem="UPu-H4-wq8" firstAttribute="top" secondItem="jcf-CS-9hS" secondAttribute="bottom" constant="8" id="hT6-9e-fca"/>
+                            <constraint firstItem="UPu-H4-wq8" firstAttribute="centerX" secondItem="rU6-Fw-BqF" secondAttribute="centerX" id="haM-ET-yP5"/>
+                            <constraint firstItem="9Pu-ck-mfn" firstAttribute="centerY" secondItem="OTf-nv-vs9" secondAttribute="centerY" id="lPe-UM-yt7"/>
+                            <constraint firstItem="0fr-IN-v5V" firstAttribute="top" secondItem="O8e-Or-JJN" secondAttribute="bottom" constant="8" id="lUi-Xd-RY3"/>
+                            <constraint firstItem="jcf-CS-9hS" firstAttribute="centerX" secondItem="rU6-Fw-BqF" secondAttribute="centerX" id="ll6-OJ-ZoL"/>
+                            <constraint firstItem="OTf-nv-vs9" firstAttribute="centerX" secondItem="rU6-Fw-BqF" secondAttribute="centerX" id="oF6-aA-TaT"/>
+                            <constraint firstItem="DJO-Id-bzA" firstAttribute="leading" secondItem="jcf-CS-9hS" secondAttribute="trailing" constant="8" id="orL-Me-HGK"/>
+                            <constraint firstItem="9Pu-ck-mfn" firstAttribute="leading" secondItem="OTf-nv-vs9" secondAttribute="trailing" constant="8" id="wM6-Nk-P0v"/>
+                            <constraint firstItem="Ora-ZX-RJz" firstAttribute="top" secondItem="OTf-nv-vs9" secondAttribute="bottom" constant="8" id="yhi-cO-Rzu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GZU-lI-A8H"/>
+                    </view>
+                    <connections>
+                        <outlet property="interestedGenderSwitch" destination="OTf-nv-vs9" id="pbc-Mi-vw1"/>
+                        <outlet property="profileImageView" destination="40D-ii-VRf" id="Ujy-OE-2QJ"/>
+                        <outlet property="userGenderSwitch" destination="jcf-CS-9hS" id="khU-ca-nHS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7EP-LR-1rS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="107"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -134,7 +243,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="105.69715142428787"/>
+            <point key="canvasLocation" x="1150" y="98"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatar" width="256" height="256"/>
+    </resources>
 </document>

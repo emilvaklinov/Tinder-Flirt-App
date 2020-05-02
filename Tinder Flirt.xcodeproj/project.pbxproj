@@ -14,6 +14,7 @@
 		48A56EDB245D90AC00487DB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48A56EDA245D90AC00487DB2 /* Assets.xcassets */; };
 		48A56EDE245D90AC00487DB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48A56EDC245D90AC00487DB2 /* LaunchScreen.storyboard */; };
 		48A56EE6245DB54F00487DB2 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A56EE5245DB54F00487DB2 /* LogInViewController.swift */; };
+		48A56EE8245E002A00487DB2 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A56EE7245E002A00487DB2 /* UpdateViewController.swift */; };
 		6736B5735F6334DE1D8800F1 /* Pods_Tinder_Flirt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7409A259FFB162B535627F9C /* Pods_Tinder_Flirt.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 		48A56EDD245D90AC00487DB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48A56EDF245D90AC00487DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48A56EE5245DB54F00487DB2 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		48A56EE7245E002A00487DB2 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		7409A259FFB162B535627F9C /* Pods_Tinder_Flirt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder_Flirt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D977C54ED328C0F5B9CD09 /* Pods-Tinder Flirt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder Flirt.debug.xcconfig"; path = "Target Support Files/Pods-Tinder Flirt/Pods-Tinder Flirt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				48A56EDC245D90AC00487DB2 /* LaunchScreen.storyboard */,
 				48A56EDF245D90AC00487DB2 /* Info.plist */,
 				48A56EE5245DB54F00487DB2 /* LogInViewController.swift */,
+				48A56EE7245E002A00487DB2 /* UpdateViewController.swift */,
 			);
 			path = "Tinder Flirt";
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				48A56ED6245D90AA00487DB2 /* ViewController.swift in Sources */,
 				48A56ED2245D90AA00487DB2 /* AppDelegate.swift in Sources */,
 				48A56ED4245D90AA00487DB2 /* SceneDelegate.swift in Sources */,
+				48A56EE8245E002A00487DB2 /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
