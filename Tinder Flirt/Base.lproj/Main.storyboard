@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lP1-bl-Ckf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uFw-tm-46i">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -95,6 +95,7 @@
                         <outlet property="logInSignUpButton" destination="TYQ-Ft-f2w" id="xtH-ei-tfG"/>
                         <outlet property="passwordTextField" destination="wRZ-Vp-vwt" id="jtY-KG-czf"/>
                         <outlet property="usernameTextField" destination="2LL-0j-q6q" id="bbK-w7-tkT"/>
+                        <segue destination="lP1-bl-Ckf" kind="presentation" identifier="updateSegue" id="R7d-0U-HFy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6k-w0-Jff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -106,7 +107,7 @@
             <objects>
                 <viewController id="lP1-bl-Ckf" customClass="UpdateViewController" customModule="Tinder_Flirt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rU6-Fw-BqF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="40D-ii-VRf">

@@ -38,6 +38,7 @@ class LogInViewController: UIViewController {
                     self.errorLabel.text = errorMessage
                 } else {
                     print("Sign up Successful")
+                    self.performSegue(withIdentifier: "updateSegue", sender: nil)
                 }
             })
             
@@ -56,10 +57,17 @@ class LogInViewController: UIViewController {
                             self.errorLabel.text = errorMessage
                         } else {
                             print("Login Successful")
+                            self.performSegue(withIdentifier: "updateSegue", sender: nil)
                         }
                     })
                 }
             }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() != nil {
+            self.performSegue(withIdentifier: "updateSegue", sender: nil)
         }
     }
     
