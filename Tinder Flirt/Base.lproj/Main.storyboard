@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uFw-tm-46i">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -7,6 +7,91 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Log In View Controller-->
+        <scene sceneID="rt9-jY-ltn">
+            <objects>
+                <viewController id="uFw-tm-46i" customClass="LogInViewController" customModule="Tinder_Flirt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NzG-yp-Iby">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tinder Flirt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQW-1H-pSS">
+                                <rect key="frame" x="96" y="10" width="183" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a username and password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VH3-fd-kZX">
+                                <rect key="frame" x="65" y="66" width="245" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2LL-0j-q6q">
+                                <rect key="frame" x="16" y="108" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wRZ-Vp-vwt">
+                                <rect key="frame" x="16" y="150" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TYQ-Ft-f2w">
+                                <rect key="frame" x="164" y="203" width="47" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="logInSignUpTapped:" destination="uFw-tm-46i" eventType="touchUpInside" id="oJ9-vt-XdI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jq3-91-Mle">
+                                <rect key="frame" x="179" y="251" width="17" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgF-zd-uaC">
+                                <rect key="frame" x="157" y="284" width="61" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="changeLogInSignUpTapped:" destination="uFw-tm-46i" eventType="touchUpInside" id="zxi-9h-c5r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Jq3-91-Mle" firstAttribute="top" secondItem="TYQ-Ft-f2w" secondAttribute="bottom" constant="15" id="2jF-qj-GAO"/>
+                            <constraint firstItem="WgF-zd-uaC" firstAttribute="top" secondItem="Jq3-91-Mle" secondAttribute="bottom" constant="15" id="5yb-6b-Mf7"/>
+                            <constraint firstItem="Jq3-91-Mle" firstAttribute="centerX" secondItem="NzG-yp-Iby" secondAttribute="centerX" id="7jH-Cp-eBV"/>
+                            <constraint firstItem="TYQ-Ft-f2w" firstAttribute="centerX" secondItem="NzG-yp-Iby" secondAttribute="centerX" id="9Lu-RT-e3w"/>
+                            <constraint firstItem="2LL-0j-q6q" firstAttribute="top" secondItem="VH3-fd-kZX" secondAttribute="bottom" constant="21" id="CtZ-vH-1Wc"/>
+                            <constraint firstItem="wRZ-Vp-vwt" firstAttribute="leading" secondItem="RNZ-8J-I87" secondAttribute="leading" constant="16" id="LD0-2X-Pf4"/>
+                            <constraint firstItem="WgF-zd-uaC" firstAttribute="centerX" secondItem="NzG-yp-Iby" secondAttribute="centerX" id="MO6-Ed-NWx"/>
+                            <constraint firstItem="VH3-fd-kZX" firstAttribute="top" secondItem="IQW-1H-pSS" secondAttribute="bottom" constant="8" id="PgL-CD-ljp"/>
+                            <constraint firstItem="RNZ-8J-I87" firstAttribute="trailing" secondItem="2LL-0j-q6q" secondAttribute="trailing" constant="16" id="Pyw-RE-vvx"/>
+                            <constraint firstItem="2LL-0j-q6q" firstAttribute="leading" secondItem="RNZ-8J-I87" secondAttribute="leading" constant="16" id="RWO-ou-A9Z"/>
+                            <constraint firstItem="VH3-fd-kZX" firstAttribute="centerX" secondItem="NzG-yp-Iby" secondAttribute="centerX" id="WSJ-Go-tdu"/>
+                            <constraint firstItem="IQW-1H-pSS" firstAttribute="top" secondItem="RNZ-8J-I87" secondAttribute="top" constant="10" id="d3u-6c-eGq"/>
+                            <constraint firstItem="RNZ-8J-I87" firstAttribute="trailing" secondItem="wRZ-Vp-vwt" secondAttribute="trailing" constant="16" id="doF-7Z-hsl"/>
+                            <constraint firstItem="wRZ-Vp-vwt" firstAttribute="top" secondItem="2LL-0j-q6q" secondAttribute="bottom" constant="8" id="get-lz-3li"/>
+                            <constraint firstItem="TYQ-Ft-f2w" firstAttribute="top" secondItem="wRZ-Vp-vwt" secondAttribute="bottom" constant="19" id="vcw-tc-Uxb"/>
+                            <constraint firstItem="IQW-1H-pSS" firstAttribute="centerX" secondItem="NzG-yp-Iby" secondAttribute="centerX" id="wu4-dV-b7c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RNZ-8J-I87"/>
+                    </view>
+                    <connections>
+                        <outlet property="LogInSignUpButton" destination="TYQ-Ft-f2w" id="GyC-P6-6Sz"/>
+                        <outlet property="changeLogInSignUpButton" destination="WgF-zd-uaC" id="ZO0-ai-0s4"/>
+                        <outlet property="passwordTextField" destination="wRZ-Vp-vwt" id="jtY-KG-czf"/>
+                        <outlet property="usernameTextField" destination="2LL-0j-q6q" id="bbK-w7-tkT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6k-w0-Jff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-580" y="106.59670164917542"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
