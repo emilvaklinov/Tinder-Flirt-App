@@ -30,7 +30,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2LL-0j-q6q">
                                 <rect key="frame" x="16" y="108" width="343" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wRZ-Vp-vwt">
                                 <rect key="frame" x="16" y="150" width="343" height="34"/>
@@ -51,6 +51,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgx-jf-dm4">
+                                <rect key="frame" x="168.5" y="325" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.86612913479999998" green="0.1446749028" blue="0.1078846309" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgF-zd-uaC">
                                 <rect key="frame" x="157" y="284" width="61" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -62,11 +68,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Jgx-jf-dm4" firstAttribute="centerX" secondItem="NzG-yp-Iby" secondAttribute="centerX" id="06T-NO-2hV"/>
                             <constraint firstItem="Jq3-91-Mle" firstAttribute="top" secondItem="TYQ-Ft-f2w" secondAttribute="bottom" constant="15" id="2jF-qj-GAO"/>
                             <constraint firstItem="WgF-zd-uaC" firstAttribute="top" secondItem="Jq3-91-Mle" secondAttribute="bottom" constant="15" id="5yb-6b-Mf7"/>
                             <constraint firstItem="Jq3-91-Mle" firstAttribute="centerX" secondItem="NzG-yp-Iby" secondAttribute="centerX" id="7jH-Cp-eBV"/>
                             <constraint firstItem="TYQ-Ft-f2w" firstAttribute="centerX" secondItem="NzG-yp-Iby" secondAttribute="centerX" id="9Lu-RT-e3w"/>
                             <constraint firstItem="2LL-0j-q6q" firstAttribute="top" secondItem="VH3-fd-kZX" secondAttribute="bottom" constant="21" id="CtZ-vH-1Wc"/>
+                            <constraint firstItem="Jgx-jf-dm4" firstAttribute="top" secondItem="WgF-zd-uaC" secondAttribute="bottom" constant="8" id="KlI-aZ-Nbl"/>
                             <constraint firstItem="wRZ-Vp-vwt" firstAttribute="leading" secondItem="RNZ-8J-I87" secondAttribute="leading" constant="16" id="LD0-2X-Pf4"/>
                             <constraint firstItem="WgF-zd-uaC" firstAttribute="centerX" secondItem="NzG-yp-Iby" secondAttribute="centerX" id="MO6-Ed-NWx"/>
                             <constraint firstItem="VH3-fd-kZX" firstAttribute="top" secondItem="IQW-1H-pSS" secondAttribute="bottom" constant="8" id="PgL-CD-ljp"/>
@@ -82,8 +90,9 @@
                         <viewLayoutGuide key="safeArea" id="RNZ-8J-I87"/>
                     </view>
                     <connections>
-                        <outlet property="LogInSignUpButton" destination="TYQ-Ft-f2w" id="GyC-P6-6Sz"/>
                         <outlet property="changeLogInSignUpButton" destination="WgF-zd-uaC" id="ZO0-ai-0s4"/>
+                        <outlet property="errorLabel" destination="Jgx-jf-dm4" id="L8C-Wb-H6u"/>
+                        <outlet property="logInSignUpButton" destination="TYQ-Ft-f2w" id="xtH-ei-tfG"/>
                         <outlet property="passwordTextField" destination="wRZ-Vp-vwt" id="jtY-KG-czf"/>
                         <outlet property="usernameTextField" destination="2LL-0j-q6q" id="bbK-w7-tkT"/>
                     </connections>
