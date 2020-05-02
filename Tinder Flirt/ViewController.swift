@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         
         let gesture = UIPanGestureRecognizer(target: self, action: #selector(wasDragged(gestureRecognizer:)))
         swipeLabel.addGestureRecognizer(gesture)
+        
 
     }
     
