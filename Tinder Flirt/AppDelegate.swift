@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Connect to the server
+        let config = ParseClientConfiguration { (theConfig) in
+            theConfig.applicationId = "tinderFlirtId"
+            theConfig.server = "http://tinderflirt.herokuapp.com/parse"
+            theConfig.clientKey = "tinderFlirtMasterKey"
+        }
+        Parse.initialize(with: config)
+        
+//        parse-dashboard --dev --appId tinderFlirtId --masterKey tinderFlirtMasterKey --serverURL "http://tinderflirt.herokuapp.com/parse" --appName optionalName
+
         return true
     }
 
