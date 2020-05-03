@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="uFw-tm-46i" customClass="LogInViewController" customModule="Tinder_Flirt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NzG-yp-Iby">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tinder Flirt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQW-1H-pSS">
@@ -96,6 +96,7 @@
                         <outlet property="passwordTextField" destination="wRZ-Vp-vwt" id="jtY-KG-czf"/>
                         <outlet property="usernameTextField" destination="2LL-0j-q6q" id="bbK-w7-tkT"/>
                         <segue destination="lP1-bl-Ckf" kind="presentation" identifier="updateSegue" id="R7d-0U-HFy"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginToSwippingSegue" id="TMb-bH-0Ui"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6k-w0-Jff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -214,49 +215,64 @@
                         <outlet property="interestedGenderSwitch" destination="OTf-nv-vs9" id="pbc-Mi-vw1"/>
                         <outlet property="profileImageView" destination="40D-ii-VRf" id="Ujy-OE-2QJ"/>
                         <outlet property="userGenderSwitch" destination="jcf-CS-9hS" id="khU-ca-nHS"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="updateToSwipeSague" id="BGO-eX-ZKz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7EP-LR-1rS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="107"/>
+            <point key="canvasLocation" x="-2215" y="896"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tinder_Flirt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHg-Ep-jZ5">
-                                <rect key="frame" x="12.5" y="158.5" width="350" height="350"/>
-                                <color key="backgroundColor" red="0.86612913479999998" green="0.1446749028" blue="0.1078846309" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3v3-QV-NaQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="Cu5-za-p2p">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="HlT-qU-PHy">
+                                            <connections>
+                                                <action selector="logoutTapped:" destination="BYZ-38-t0r" id="WC2-B8-SK8"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="EQt-Lw-WcL">
+                                <rect key="frame" x="50" y="186" width="275" height="275"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="2Os-cw-BEd"/>
-                                    <constraint firstAttribute="height" constant="350" id="ULp-Co-5BU"/>
+                                    <constraint firstAttribute="width" secondItem="EQt-Lw-WcL" secondAttribute="height" multiplier="1:1" id="BrR-6D-s1v"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pHg-Ep-jZ5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jaS-UJ-s3F"/>
-                            <constraint firstItem="pHg-Ep-jZ5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ve6-b1-PA6"/>
+                            <constraint firstItem="EQt-Lw-WcL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Be4-V8-6BF"/>
+                            <constraint firstItem="EQt-Lw-WcL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Rfr-EN-Hnc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EQt-Lw-WcL" secondAttribute="trailing" constant="50" id="YDt-uV-m5X"/>
+                            <constraint firstItem="EQt-Lw-WcL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q2q-QS-2Wb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="swipeLabel" destination="pHg-Ep-jZ5" id="eU2-cK-zZR"/>
+                        <outlet property="swipeImage" destination="EQt-Lw-WcL" id="yud-HJ-pOG"/>
+                        <segue destination="uFw-tm-46i" kind="presentation" identifier="logoutSegue" id="91Q-oq-AXm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1150" y="98"/>
+            <point key="canvasLocation" x="-1305" y="896"/>
         </scene>
     </scenes>
     <resources>
         <image name="avatar" width="256" height="256"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="BGO-eX-ZKz"/>
+    </inferredMetricsTieBreakers>
 </document>

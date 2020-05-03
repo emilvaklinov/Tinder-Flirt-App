@@ -39,7 +39,7 @@ class UpdateViewController: UIViewController, UINavigationControllerDelegate, UI
                 }
             })
         }
-        createWomen()
+
     }
     
     func createWomen() {
@@ -111,6 +111,7 @@ class UpdateViewController: UIViewController, UINavigationControllerDelegate, UI
                                
                            } else {
                                print("Update Successful")
+                            self.performSegue(withIdentifier: "updateToSwipeSague", sender: nil)
                            }
                        })
                    }
