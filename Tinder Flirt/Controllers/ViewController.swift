@@ -43,15 +43,15 @@ class ViewController: UIViewController {
         
         swipeImage.transform = scaledAndRotated
         
-        // Fixing swiping to exact point
         if gestureRecognizer.state == .ended {
+            
             var acceptedOrRejected = ""
             
             if swipeImage.center.x < (view.bounds.width / 2 - 100) {
-                print("Not interested")
+                print("Not Interested")
                 acceptedOrRejected = "rejected"
             }
-            if swipeImage.center.x < (view.bounds.width / 2 + 100) {
+            if swipeImage.center.x > (view.bounds.width / 2 + 100) {
                 print("Interested")
                 acceptedOrRejected = "accepted"
             }
@@ -65,26 +65,44 @@ class ViewController: UIViewController {
                     }
                 })
             }
-            // Fixing the rotation
+            
             rotation = CGAffineTransform(rotationAngle: 0)
+            
             scaledAndRotated = rotation.scaledBy(x: 1, y: 1)
+            
             swipeImage.transform = scaledAndRotated
             
             swipeImage.center = CGPoint(x: view.bounds.width / 2, y: view.bounds.height / 2)
-            
-            
         }
     }
     
     func updateImage() {
         if let query = PFUser.query() {
+            
             if let isInterestedInWomen = PFUser.current()?["isInterestedInWomen"] {
+                
                 query.whereKey("isFemale", equalTo: isInterestedInWomen)
             }
+            
             if let isFemale = PFUser.current()?["isFemale"] {
+                
                 query.whereKey("isInterestedInWomen", equalTo: isFemale)
             }
+            
+            var ignoredUsers : [String] = []
+            
+            if let acceptedUsers = PFUser.current()?["accepted"] as? [String] {
+                ignoredUsers += acceptedUsers
+            }
+            
+            if let rejectedUsers = PFUser.current()?["rejected"] as? [String] {
+                ignoredUsers += rejectedUsers
+            }
+            
+            query.whereKey("objectId", notContainedIn: ignoredUsers)
+            
             query.limit = 1
+            
             query.findObjectsInBackground { (objects, error) in
                 if let users = objects {
                     for object in users {
@@ -98,13 +116,14 @@ class ViewController: UIViewController {
                                         }
                                     }
                                 })
-                                
                             }
                         }
                     }
                 }
             }
         }
+        
     }
     
 }
+

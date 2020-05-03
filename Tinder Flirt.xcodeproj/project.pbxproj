@@ -77,15 +77,31 @@
 			children = (
 				48A56ED1245D90AA00487DB2 /* AppDelegate.swift */,
 				48A56ED3245D90AA00487DB2 /* SceneDelegate.swift */,
-				48A56ED5245D90AA00487DB2 /* ViewController.swift */,
-				48A56ED7245D90AA00487DB2 /* Main.storyboard */,
 				48A56EDA245D90AC00487DB2 /* Assets.xcassets */,
-				48A56EDC245D90AC00487DB2 /* LaunchScreen.storyboard */,
 				48A56EDF245D90AC00487DB2 /* Info.plist */,
+				48A56EE9245F3B7B00487DB2 /* Controllers */,
+				48A56EEA245F3BA700487DB2 /* Views */,
+			);
+			path = "Tinder Flirt";
+			sourceTree = "<group>";
+		};
+		48A56EE9245F3B7B00487DB2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				48A56ED5245D90AA00487DB2 /* ViewController.swift */,
 				48A56EE5245DB54F00487DB2 /* LogInViewController.swift */,
 				48A56EE7245E002A00487DB2 /* UpdateViewController.swift */,
 			);
-			path = "Tinder Flirt";
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		48A56EEA245F3BA700487DB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48A56ED7245D90AA00487DB2 /* Main.storyboard */,
+				48A56EDC245D90AC00487DB2 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D4FD2BAF659FE609685DF5E9 /* Pods */ = {
