@@ -297,7 +297,7 @@
                                 <rect key="frame" x="0.0" y="73" width="375" height="574"/>
                                 <color key="backgroundColor" red="1" green="0.83921568629999999" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="140" id="cDZ-0m-t28">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="140" id="cDZ-0m-t28" customClass="MatchTableViewCell" customModule="Tinder_Flirt" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cDZ-0m-t28" id="ka6-Vr-d4I">
@@ -307,6 +307,8 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="mfb-HX-NkX">
                                                     <rect key="frame" x="5" y="5" width="130" height="130"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="height" constant="130" id="Z12-4U-22W"/>
+                                                        <constraint firstAttribute="width" constant="130" id="dWV-M7-Sha"/>
                                                         <constraint firstAttribute="width" secondItem="mfb-HX-NkX" secondAttribute="height" multiplier="1:1" id="fXA-V5-hrw"/>
                                                     </constraints>
                                                 </imageView>
@@ -327,6 +329,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1O-Kg-laV">
                                                     <rect key="frame" x="334" y="105" width="36" height="30"/>
                                                     <state key="normal" title="Send"/>
+                                                    <connections>
+                                                        <action selector="sendTapped:" destination="cDZ-0m-t28" eventType="touchUpInside" id="Gt1-bq-uWL"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -344,6 +349,11 @@
                                                 <constraint firstItem="gML-Jz-Nl0" firstAttribute="leading" secondItem="mfb-HX-NkX" secondAttribute="trailing" constant="5" id="uzi-CH-Z5d"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="rEO-xU-xjc" id="1HO-dO-Obu"/>
+                                            <outlet property="messageTextField" destination="gML-Jz-Nl0" id="GEC-bk-ffV"/>
+                                            <outlet property="profileImageView" destination="mfb-HX-NkX" id="Fht-mp-MV7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -360,6 +370,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m56-TC-o8r"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Jvd-ql-W8i" id="OOw-eZ-lfF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTY-Cu-Pty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
