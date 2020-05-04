@@ -23,6 +23,12 @@ class ViewController: UIViewController {
         swipeImage.addGestureRecognizer(gesture)
         
         updateImage()
+        PFGeoPoint.geoPointForCurrentLocation { (geoPoint, error) in
+            if let point = geoPoint {
+                PFUser.current()?["location"] = point
+                PFUser.current()?.saveInBackground()
+            }
+        }
     }
     @IBAction func logoutTapped(_ sender: Any) {
         PFUser.logOut()
@@ -100,6 +106,10 @@ class ViewController: UIViewController {
             }
             
             query.whereKey("objectId", notContainedIn: ignoredUsers)
+            
+            if let geoPoint = PFUser.current()?["location"] as? PFGeoPoint {
+                query.whereKey("location", withinGeoBoxFromSouthwest: PFGeoPoint(latitude: geoPoint.latitude - 1, longitude: geoPoint.longitude - 1), toNortheast: PFGeoPoint(latitude: geoPoint.latitude + 1, longitude: geoPoint.longitude + 1))
+            }
             
             query.limit = 1
             
